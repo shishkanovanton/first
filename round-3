@@ -1,0 +1,20 @@
+def my_round(floatnum,accdigit):
+    i=0
+    while (len(str(floatnum).split(".")[0])!=accdigit):
+        if (len(str(floatnum).split(".")[0]))>=accdigit:
+            floatnum = floatnum/10
+            i=i-1
+        else:
+            floatnum = floatnum*10
+            i=i+1
+    round_digit = int(floatnum*10)%10
+    if round_digit>=5:
+        floatnum=int(floatnum)+1
+    else:
+        floatnum=int(floatnum)
+    rounded=floatnum*(10**(-i))
+    return rounded
+
+float_number = float(input("enter number"))
+acc_digit = 3
+print(my_round(float_number,acc_digit))
