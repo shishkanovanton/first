@@ -1,0 +1,13 @@
+import random
+
+operators = ["+","-","*","/"]
+i = 1
+expression = ""
+while i<=8:
+    operator = random.choice(operators)
+    item = random.randint(1, 100)
+    expression = expression + str(item) 
+    if i!=8:
+         expression = expression+ operator
+    i=i+1
+print(expression)
