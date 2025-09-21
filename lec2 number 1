@@ -1,0 +1,22 @@
+import math
+def getT(Qs,R,h0,h,r):
+    i=0
+    Ts = []
+    while i < len(Qs):
+        t = (Qs[i]*math.log(R/r))/(2*math.pi*(h0-h))
+        Ts.append(t)
+        i+=1
+    
+    return Ts
+
+Qs = []
+i = 1
+n= 100
+while i<n:
+    Qs.append(i)
+    i+=1
+R = 10**6
+h0 = 0
+h= -0.3
+r=20
+print(getT(Qs,R,h0,h,r))
