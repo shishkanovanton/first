@@ -1,0 +1,13 @@
+import math
+Qs = []
+i = 1
+n= 100
+while i<n:
+    Qs.append(i)
+    i+=1
+R = 10**6
+h0 = 0
+h= -0.3
+r=20
+Ts = list(map(lambda Q: Q*math.log(R/r)/(2*math.pi*(h0-h)), Qs))
+print(Ts)
