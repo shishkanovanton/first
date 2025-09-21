@@ -1,0 +1,13 @@
+def sredn(numbs,countmax,countmin):
+    numbs = [element for element in numbs if not isinstance(element, str)] #третье задание
+    numbs.sort()
+    i=countmin
+    numbssum = 0
+    while i < len(numbs)-countmax:
+        numbssum = numbssum+numbs[i]
+        i+=1
+    return numbssum/(len(numbs)-countmax-countmin)
+numbers = [2, 1, 3, 400,"3", 1, 3, 62]
+countmax = int(input("Введите количество максимальных")) #=1 первое задание
+countmin = int(input("Введите количество минимальных")) #=1 первое задание
+print(sredn(numbers,countmax,countmin))
