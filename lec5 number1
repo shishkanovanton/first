@@ -1,0 +1,3 @@
+ryad = [1, 3, 5, 7, 9, 11]
+otvet = sum(map(lambda x: x*x, ryad))
+print(otvet)
