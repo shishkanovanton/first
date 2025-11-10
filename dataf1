@@ -1,0 +1,10 @@
+import pandas as pd
+import numpy as np
+np.random.seed(42)  
+dataframe = pd.DataFrame(np.random.randint(0, 2, size=(10, 10)))
+print("Исходный датафрейм:")
+print(dataframe)
+
+even_columns = df.filter(lambda x: df.columns.get_loc(x) % 2 == 0)
+print("\nКолонки с четными индексами :")
+print(even_columns)
